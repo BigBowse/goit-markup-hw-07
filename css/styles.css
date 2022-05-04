@@ -73,7 +73,7 @@ img {
   display: flex;
 }
 
-.nav {
+.site-nav {
   display: flex;
   align-items: center;
 }
@@ -83,11 +83,11 @@ img {
   margin-left: 93px;
 }
 
-.site-nav__list .item+.item {
+.site-nav__list-item:not(:first-child) {
   margin-left: 50px;
 }
 
-.site-nav__list .site-nav__link {
+.site-nav__link {
   position: relative;
 
   display: block;
@@ -106,7 +106,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav__list .site-nav__link::after {
+.site-nav__link::after {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -127,18 +127,18 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav__list .site-nav__link:hover,
-.site-nav__list .site-nav__link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav__list .site-nav__link:hover::after,
-.site-nav__list .site-nav__link:focus::after {
+.site-nav__link:hover::after,
+.site-nav__link:focus::after {
   opacity: 1;
   visibility: visible;
 }
 
-.site-nav__list .site-nav__link.current {
+.site-nav__link.current {
   position: relative;
 
   display: block;
@@ -146,7 +146,7 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav__list .site-nav__link.current::after {
+.site-nav__link.current::after {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -167,11 +167,11 @@ img {
   margin-left: auto;
 }
 
-.contact-list .item + .item {
+.contact-list__item:not(:first-child) {
   margin-left: 50px;
 }
 
-.contact-list .contact-list__link {
+.contact-list__link {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -188,14 +188,14 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list .contact-list__link-icon {
+.contact-list__link-icon {
   display: flex;
   align-items: center;
   margin-right: 10px;
   background-color: var(--primary-white-color);
 }
 
-.contact-list .icon-email {
+.contact-list__icon-email {
   width: 16px;
   height: 12px;
   fill: currentColor;
@@ -205,7 +205,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list .icon-phone {
+.contact-list__icon-phone {
   width: 10px;
   height: 16px;
 
@@ -214,15 +214,13 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list .contact-list__link:hover,
-.contact-list .contact-list__link:focus {
+.contact-list__link:hover,
+.contact-list__link:focus {
   color: var(--accent-color);
 }
 
-.contact-list .link:hover .icon-email,
-.contact-list .link:focus .icon-email,
-.contact-list .link:hover .icon-phone,
-.contact-list .link:focus .icon-phone {
+.contact-list__link:hover .contact-list__link-icon,
+.contact-list__link:focus .contact-list__link-icon {
   fill: var(--accent-color);
 }
 
@@ -291,7 +289,7 @@ img {
   padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   color: var(--title-text-color);
   font-family: "Roboto";
   font-weight: 700;
@@ -304,15 +302,15 @@ img {
 }
 
 /* Features */
-.features {
+.features__list {
   display: flex;
 }
 
-.features .item {
+.features__list .feature {
   width: 270px;
 }
 
-.features .item::before {
+.features__list .feature::before {
   display: flex;
   content: "";
   height: 120px;
@@ -323,31 +321,31 @@ img {
   background-color: var(--background-secondary-color);
 }
 
-.features .icon-antenna::before {
+.features__list .icon-antenna::before {
   background-image: url(../images/icons/hw4/SVG/icon-antenna.svg);
   background-size: 65.32px 70px;
 }
 
-.features .icon-clock::before {
+.features__list .icon-clock::before {
   background-image: url(../images/icons/hw4/SVG/clock.svg);
   background-size: 66.96px 70px;
 }
 
-.features .icon-diagram::before {
+.features__list .icon-diagram::before {
   background-image: url(../images/icons/hw4/SVG/diagram.svg);
   background-size: 70px 70px;
 }
 
-.features .icon-astronaut::before {
+.features__list .icon-astronaut::before {
   background-image: url(../images/icons/hw4/SVG/astronaut.svg);
   background-size: 70px;
 }
 
-.features .item+.item {
+.features__list .feature + .feature {
   margin-left: 30px;
 }
 
-.features .title {
+.features__list .feature__title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -358,7 +356,7 @@ img {
   margin-bottom: 10px;
 }
 
-.features .text {
+.features__list .feature__text {
   font-size: 14px;
   line-height: 1.71;
 
