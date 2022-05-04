@@ -47,6 +47,14 @@ img {
   border-bottom: 1px solid var(--header-bottom-border-color);
 }
 
+.list {
+  list-style: none;
+  text-decoration: none;
+
+  padding: 0;
+  margin: 0;
+}
+
 .logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -56,16 +64,8 @@ img {
   color: var(--accent-color);
 }
 
-.logo .logo__text {
+.logo__text {
   color: var(--title-text-color);
-}
-
-.list {
-  list-style: none;
-  text-decoration: none;
-
-  padding: 0;
-  margin: 0;
 }
 
 /* Site nav */
@@ -238,6 +238,14 @@ img {
   background-size: cover;
 }
 
+/* Button */
+.button {
+  font-family: inherit;
+  cursor: pointer;
+
+  border: 1px solid transparent;
+}
+
 /* Hero */
 .hero {
   background-color: var(--background-black-color);
@@ -257,14 +265,6 @@ img {
 
   margin-top: 0;
   margin-bottom: 30px;
-}
-
-/* Button */
-.button {
-  font-family: inherit;
-  cursor: pointer;
-
-  border: 1px solid transparent;
 }
 
 .hero__button {
@@ -306,11 +306,11 @@ img {
   display: flex;
 }
 
-.features__list .feature {
+.feature {
   width: 270px;
 }
 
-.features__list .feature::before {
+.feature::before {
   display: flex;
   content: "";
   height: 120px;
@@ -321,31 +321,31 @@ img {
   background-color: var(--background-secondary-color);
 }
 
-.features__list .icon-antenna::before {
+.feature__icon-antenna::before {
   background-image: url(../images/icons/hw4/SVG/icon-antenna.svg);
   background-size: 65.32px 70px;
 }
 
-.features__list .icon-clock::before {
+.feature__icon-clock::before {
   background-image: url(../images/icons/hw4/SVG/clock.svg);
   background-size: 66.96px 70px;
 }
 
-.features__list .icon-diagram::before {
+.feature__icon-diagram::before {
   background-image: url(../images/icons/hw4/SVG/diagram.svg);
   background-size: 70px 70px;
 }
 
-.features__list .icon-astronaut::before {
+.feature__icon-astronaut::before {
   background-image: url(../images/icons/hw4/SVG/astronaut.svg);
   background-size: 70px;
 }
 
-.features__list .feature + .feature {
+.feature:not(:first-child) {
   margin-left: 30px;
 }
 
-.features__list .feature__title {
+.feature__title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -356,7 +356,7 @@ img {
   margin-bottom: 10px;
 }
 
-.features__list .feature__text {
+.feature__text {
   font-size: 14px;
   line-height: 1.71;
 
@@ -365,7 +365,7 @@ img {
 }
 
 /* Examples */
-.section.no-padding-top {
+.section .no-padding-top {
   padding-top: 0;
 }
 
