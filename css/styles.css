@@ -746,11 +746,11 @@ img {
   text-align: center;
 }
 
-.categories-list .item+.item {
+.category:not(:first-child) {
   margin-left: 8px;
 }
 
-.categories-list .button {
+.category__button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -766,7 +766,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-list .button.current {
+.category__button--active {
   background-color: var(--accent-color);
 
   color: var(--primary-white-color);
@@ -774,7 +774,7 @@ img {
   min-width: 73px;
 }
 
-.button.secondary {
+.category__button--secondary {
   background-color: var(--background-secondary-color);
 
   color: var(--title-text-color);
@@ -786,15 +786,15 @@ img {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-list .button:hover,
-.categories-list .button:focus {
+.category__button:hover,
+.category__button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button.secondary:hover,
-.button.secondary:focus,
-.button.secondary:active {
+.category__button--secondary:hover,
+.category__button--secondary:focus,
+.category__button--secondary:active {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
