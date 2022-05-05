@@ -713,7 +713,7 @@ img {
   outline: none;
 }
 
-.footer-form__button {
+.footer-button {
   margin-left: 12px;
   min-width: 200px;
   height: 50px;
@@ -731,7 +731,7 @@ img {
   background-color: var(--accent-color);
 }
 
-.footer-form__icon {
+.footer-button__icon {
   margin-left: 10px;
   align-items: center;
 }
