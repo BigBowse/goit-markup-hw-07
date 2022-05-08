@@ -221,8 +221,8 @@ img {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero_bg.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./images/hero_bg.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/hero_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -286,19 +286,19 @@ img {
   background-color: #f5f4fa;
 }
 .feature__icon-antenna::before {
-  background-image: url(../images/icons/hw4/SVG/antenna.svg);
+  background-image: url(./images/icons/hw4/SVG/antenna.svg);
   background-size: 65.32px 70px;
 }
 .feature__icon-clock::before {
-  background-image: url(../images/icons/hw4/SVG/clock.svg);
+  background-image: url(./images/icons/hw4/SVG/clock.svg);
   background-size: 66.96px 70px;
 }
 .feature__icon-diagram::before {
-  background-image: url(../images/icons/hw4/SVG/diagram.svg);
+  background-image: url(./images/icons/hw4/SVG/diagram.svg);
   background-size: 70px 70px;
 }
 .feature__icon-astronaut::before {
-  background-image: url(../images/icons/hw4/SVG/astronaut.svg);
+  background-image: url(./images/icons/hw4/SVG/astronaut.svg);
   background-size: 70px;
 }
 .feature:not(:first-child) {
